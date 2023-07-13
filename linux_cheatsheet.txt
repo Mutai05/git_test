@@ -1,0 +1,47 @@
+KEYPOINTS
+
+The file system is responsible for managing information on the disk.
+Information is stored in files, which are stored in directories (folders).
+Directories can also store other directories, which then form a directory tree.
+
+pwd prints the user’s current working directory.
+ls [path] prints a listing of a specific file or directory; ls on its own lists the current working directory.
+cd [path] changes the current working directory.
+
+Most commands take options that begin with a single -.
+Directory names in a path are separated with / on Unix, but \ on Windows.
+/ on its own is the root directory of the whole file system.
+An absolute path specifies a location from the root of the file system.
+A relative path specifies a location starting from the current location.
+. on its own means ‘the current directory’; .. means ‘the directory above the current one’.
+
+cp [old] [new] copies a file.
+mkdir [path] creates a new directory.
+mv [old] [new] moves (renames) a file or directory.
+rm [path] removes (deletes) a file.
+
+* matches zero or more characters in a filename, so *.txt matches all files ending in .txt.
+? matches any single character in a filename, so ?.txt matches a.txt but not any.txt.
+
+Use of the Control key may be described in many ways, including Ctrl-X, Control-X, and ^X.
+
+
+Commands related to a remote repository:
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
+git push or git push origin main (Both accomplish the same goal in this context)
+
+Commands related to the workflow:
+git add .
+git commit -m "A message describing what you have done to make this snapshot different"
+
+Commands related to checking status or log history
+git status
+git log
+
+The basic Git syntax is program | action | destination.
+
+For example,
+
+git add . is read as git | add | ., where the period represents everything in the current directory;
+git commit -m "message" is read as git | commit -m | "message"; and
+git status is read as git | status | (no destination).
