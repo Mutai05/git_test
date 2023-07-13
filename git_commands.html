@@ -1,0 +1,165 @@
+kelvin@kelvin-XPS-13-9360:~$ pwd
+/home/kelvin
+kelvin@kelvin-XPS-13-9360:~$ ls
+cv_debug.log  Documents  Pictures  Templates           WhiteSur-icon-theme
+dash-to-dock  Downloads  Public    Videos
+Desktop       Music      snap      WhiteSur-gtk-theme
+
+
+kelvin@kelvin-XPS-13-9360:~$ cd Desktop/Odin-Project/
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project$ ls
+shell-lesson-data  shell-lesson-data.zip
+
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project$ mkdir repos
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project$ cd repos/
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos$ git clone git@github.com:Mutai05/git_test.git
+Cloning into 'git_test'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos$ ls
+git_test
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos$ cd git_test/
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git remote -v
+origin	git@github.com:Mutai05/git_test.git (fetch)
+origin	git@github.com:Mutai05/git_test.git (push)
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ ls
+README.md
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ pwd
+/home/kelvin/Desktop/Odin-Project/repos/git_test
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ touch hello_world.txt
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git add hello_world.txt 
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   hello_world.txt
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git commit -m "Add hello_world.txt"
+[main 704c499] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git log
+commit 704c499f1f2594f77079e8ab0585ab7eb8325ddd (HEAD -> main)
+Author: Mutai Kelvin <kelvok2014@gmail.com>
+Date:   Fri Jul 14 01:32:55 2023 +0300
+
+    Add hello_world.txt
+
+commit 8eec694993013dd9718ed0c26008020a82ce445e (origin/main, origin/HEAD)
+Author: Mutai Kelvin <90502040+Mutai05@users.noreply.github.com>
+Date:   Fri Jul 14 01:18:09 2023 +0300
+
+    Initial commit
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ code
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git add README.md 
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello_world.txt
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git add .
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	modified:   hello_world.txt
+
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git commit -m "Edit README.md and hello_world.txt"
+[main a71623e] Edit README.md and hello_world.txt
+ 2 files changed, 2 insertions(+)
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git log
+commit a71623e34a95c27a856847637eed0c839e3e02b0 (HEAD -> main)
+Author: Mutai Kelvin <kelvok2014@gmail.com>
+Date:   Fri Jul 14 01:53:04 2023 +0300
+
+    Edit README.md and hello_world.txt
+
+commit 704c499f1f2594f77079e8ab0585ab7eb8325ddd
+Author: Mutai Kelvin <kelvok2014@gmail.com>
+Date:   Fri Jul 14 01:32:55 2023 +0300
+
+    Add hello_world.txt
+
+commit 8eec694993013dd9718ed0c26008020a82ce445e (origin/main, origin/HEAD)
+Author: Mutai Kelvin <90502040+Mutai05@users.noreply.github.com>
+Date:   Fri Jul 14 01:18:09 2023 +0300
+
+    Initial commit
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 638 bytes | 319.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Mutai05/git_test.git
+   8eec694..a71623e  main -> main
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+kelvin@kelvin-XPS-13-9360:~/Desktop/Odin-Project/repos/git_test$ 
